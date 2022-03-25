@@ -8,7 +8,7 @@ namespace Algorithm_Problems
 {
     public class Bubble_Sort
     {
-        public void UserInput()
+        public void UserInput<T>()
         {
             string GivenString = "Mango Coconut Pineapple Apple Banana Papaya Cherry Watermelon Orange Grapes";
             string[] SplitString = GivenString.Split(" ");
@@ -17,14 +17,14 @@ namespace Algorithm_Problems
             BubbleSorting(SplitString);
         }
 
-        public static void BubbleSorting(string[] GivenString)
+        public static void BubbleSorting<T>(T[] GivenString)
         {
             for (int itr = 0; itr <= GivenString.Length - 1; itr++)
             {
-                string temp;
+                T temp;
                 for (int j = 0; j < GivenString.Length - 1 - itr; j++)
                 {
-                    if (GivenString[j].CompareTo(GivenString[j + 1]) > 0)
+                    if (Comparer<T>.Default.Compare(GivenString[j], GivenString[j + 1]) > 0)
                     {
                         temp = GivenString[j + 1];
                         GivenString[j + 1] = GivenString[j];
@@ -37,9 +37,9 @@ namespace Algorithm_Problems
             Display(GivenString);
         }
 
-        public static void Display(string[] GivenString)
+        public static void Display<T>(T[] GivenString)
         {
-            foreach (string Strings in GivenString)
+            foreach (T Strings in GivenString)
             {
                 Console.Write(Strings + " ");
             }

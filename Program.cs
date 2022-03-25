@@ -6,8 +6,11 @@ namespace Algorithm_Problems
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to algorithm problems");
-            Prime_Range prime_Range = new Prime_Range();
-            prime_Range.UserInput();
+            Bubble_Sort bubbleSort = new Bubble_Sort();
+            bubbleSort.UserInput<string>();
+
+            Word_List wordList = new Word_List();
+            wordList.UserInput<string>();
         }
     }
 }

@@ -8,14 +8,14 @@ namespace Algorithm_Problems
 {
     internal class Word_List
     {
-        public void UserInput()
+        public void UserInput<T>()
         {
             Console.Write($"enter word: ");
             string Search = Console.ReadLine();
             Searching(Search);
         }
 
-        static void Searching(string Search)
+        static void Searching<T>(T Search)
         {
             List<string> wordsList = new List<string>();
             wordsList.Add("Read in a list of words from File.Then prompt the user to enter a word to search the list. The program reports if the search word is found in the list.");
