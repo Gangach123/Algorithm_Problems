@@ -6,7 +6,8 @@ namespace Algorithm_Problems
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to algorithm problems");
-            Anagram anagram = new Anagram("heart", "earth");
+            Prime_Range prime_Range = new Prime_Range();
+            prime_Range.UserInput();
         }
     }
 }
