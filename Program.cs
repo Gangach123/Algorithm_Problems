@@ -6,8 +6,8 @@ namespace Algorithm_Problems
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to algorithm problems");
-            Insertion_Sort insertion_Sort = new Insertion_Sort();
-            insertion_Sort.UserInput();
+            Bubble_Sort bubbleSort = new Bubble_Sort();
+            bubbleSort.UserInput();
         }
     }
 }
