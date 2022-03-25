@@ -17,10 +17,9 @@ namespace Algorithm_Problems
             PrimeNumber(Min, Max);
         }
 
-
-
         public static void PrimeNumber(int Min, int Max)
         {
+            Palindrom palindrome = new Palindrom();
             for (int j = Min; j < Max; j++)
             {
                 bool isPrime = true;
@@ -36,10 +35,14 @@ namespace Algorithm_Problems
 
                 if (isPrime)
                 {
-                    Console.WriteLine($"prime: {j}");
+                    bool IsPalindrome = palindrome.CheckPalindrome(j);
+                    if (IsPalindrome)
+                    {
+                        Console.WriteLine($"prime & palindrome: {j}");
+                    }
                 }
             }
-        }
 
+        }
     }
 }
